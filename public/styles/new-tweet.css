@@ -34,3 +34,7 @@ form div button {
   justify-content: space-between;
   font-family: bungee, sans-serif;
 }
+
+.minus {
+  color: red;
+}
