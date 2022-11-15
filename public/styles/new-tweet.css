@@ -1,0 +1,36 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+}
+
+textarea {
+  border: none;
+  border-bottom: black 3px solid;
+  margin-bottom: 20px;
+  background-color: #f4f1ec;
+  padding-top: 10px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+form div button {
+  background-color: #4056A1;
+  color: white;
+  padding: 7px;
+}
+
+.new-tweet {
+  padding: 0px 50px 40px 50px;
+}
+
+.new-tweet form div {
+  display: flex;
+  justify-content: space-between;
+  font-family: bungee, sans-serif;
+}
