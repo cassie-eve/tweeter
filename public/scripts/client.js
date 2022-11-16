@@ -41,12 +41,13 @@ $(document).ready(function() {
       data: $(this).serialize(),
       success: $('#tweet-text').val("")
     });
+    loadTweets();
   });
 
   const renderTweets = function(array) {
     for (let user of array) {
       const $tweet = createTweetElement(user);
-      $('#tweets-container').append($tweet); 
+      $('#tweets-container').prepend($tweet); 
     }
   }
 

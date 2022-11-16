@@ -3,10 +3,6 @@ form {
   flex-direction: column;
 }
 
-h2 {
-  text-align: center;
-}
-
 textarea {
   border: none;
   border-bottom: black 3px solid;
@@ -26,7 +22,7 @@ form div button {
 }
 
 .new-tweet {
-  padding: 0px 50px 40px 50px;
+  padding: 50px 50px 40px 50px;
 }
 
 .new-tweet form div {
