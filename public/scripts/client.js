@@ -28,11 +28,18 @@ $(document).ready(function() {
 
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
-    console.log( $(this).serialize() );
+    if ($("#tweet-text").val().length > 140) {
+      alert('That message is too long!');
+      return;
+    } else if ($("#tweet-text").val() === '') {
+      alert('Please enter a Tweet!');
+      return;
+    } else
     $.ajax({
       type: "POST",
       url: '/tweets/',
-      data: $(this).serialize()
+      data: $(this).serialize(),
+      success: $('#tweet-text').val("")
     });
   });
 
