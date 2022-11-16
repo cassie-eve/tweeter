@@ -4,10 +4,14 @@ $(document).ready(function() {
     const counter = document.querySelector('.counter');
     counter.innerHTML = result;
 
+    // This implements the char counter as well as adds and removes error messaging
     if (result < 0) {
       $('.counter').addClass('minus');
+      $("#long").removeClass("hide");
     } else if (result > 0) {
       $('.counter').removeClass('minus');
+      $("#long").addClass("hide");
+      $("#short").addClass("hide");
     }
   });
 });

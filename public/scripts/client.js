@@ -7,6 +7,12 @@
 
 $(document).ready(function() {
 
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweetData) {
     let date = timeago.format(tweetData.created_at);
     const $tweet = $(`<article class="tweet">
@@ -17,7 +23,7 @@ $(document).ready(function() {
       </div>
       <span>${tweetData.user.handle}</span>
       </header>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
       <footer>
         <p>Created ${date}</p>
         <p><i class="fa-solid fa-flag"></i>   <i class="fa-solid fa-retweet"></i>   <i class="fa-solid fa-heart"></i></p>
@@ -29,10 +35,11 @@ $(document).ready(function() {
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
     if ($("#tweet-text").val().length > 140) {
-      alert('That message is too long!');
+      // The error message for this populates from composer-char-counter.js
       return;
     } else if ($("#tweet-text").val() === '') {
-      alert('Please enter a Tweet!');
+      $("#short").removeClass("hide");
+      // The error message removal is handled in composer-char-counter.js
       return;
     } else
     $.ajax({

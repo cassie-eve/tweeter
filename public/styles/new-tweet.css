@@ -29,8 +29,19 @@ form div button {
   display: flex;
   justify-content: space-between;
   font-family: bungee, sans-serif;
+  align-items: center;
+
 }
 
-.minus {
+.hide {
+  display: none;
+}
+
+.error {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.minus,
+.error {
   color: red;
 }
