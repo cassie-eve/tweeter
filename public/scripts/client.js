@@ -1,4 +1,3 @@
-
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
