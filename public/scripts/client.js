@@ -27,9 +27,9 @@ $(document).ready(function() {
         <p>Created ${date}</p>
         <p><i class="fa-solid fa-flag"></i>   <i class="fa-solid fa-retweet"></i>   <i class="fa-solid fa-heart"></i></p>
       </footer>
-    </article>`)
-    return $tweet
-  }
+    </article>`);
+    return $tweet;
+  };
 
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
@@ -41,28 +41,28 @@ $(document).ready(function() {
       // The error message removal is handled in composer-char-counter.js
       return;
     } else
-    $.ajax({
-      type: "POST",
-      url: '/tweets/',
-      data: $(this).serialize(),
-      success: $('#tweet-text').val("")
-    });
+      $.ajax({
+        type: "POST",
+        url: '/tweets/',
+        data: $(this).serialize(),
+        success: $('#tweet-text').val("")
+      });
     loadTweets();
   });
 
   const renderTweets = function(array) {
     for (let user of array) {
       const $tweet = createTweetElement(user);
-      $('#tweets-container').prepend($tweet); 
+      $('#tweets-container').prepend($tweet);
     }
-  }
+  };
 
   const loadTweets = function() {
     $.ajax({
       url: '/tweets/',
       method: 'GET',
     }).then(renderTweets);
-  }
+  };
 
   loadTweets();
 
