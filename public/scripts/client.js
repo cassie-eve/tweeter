@@ -6,12 +6,14 @@
 
 $(document).ready(function() {
 
+  // To avoid any potential xss
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // formats the tweet into html
   const createTweetElement = function(tweetData) {
     let date = timeago.format(tweetData.created_at);
     const $tweet = $(`<article class="tweet">
@@ -31,6 +33,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  // form used to submit tweets
   $(".new-tweet form").submit(function(event) {
     event.preventDefault();
     if ($("#tweet-text").val().length > 140) {
@@ -50,6 +53,7 @@ $(document).ready(function() {
     loadTweets();
   });
 
+  //renders each tweet on the page
   const renderTweets = function(array) {
     for (let user of array) {
       const $tweet = createTweetElement(user);
@@ -57,6 +61,7 @@ $(document).ready(function() {
     }
   };
 
+  // pulls in new tweets
   const loadTweets = function() {
     $.ajax({
       url: '/tweets/',
