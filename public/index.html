@@ -39,31 +39,33 @@
         <span><i class="fa-solid fa-angles-down"></i></span>
       </div>
     </nav>
-    <header class="container3">
-      <div class="box">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="box">
-          <h2>Cassandra Keddis</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main>
-      <section class="new-tweet">
-        <form action="/tweets/" method="post">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <span class='hide error' id="long"><i class="fa-solid fa-triangle-exclamation"></i> This message is too long!</span>
-            <span class='hide error' id="short"><i class="fa-solid fa-triangle-exclamation"></i> Please enter a tweet!</span>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class='tweets' id="tweets-container">
-      </section>
-    </main>
+    <div class="layout">
+      <header class="container3">
+        <div class="box">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="box">
+            <h2>Cassandra Keddis</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main>
+        <section class="new-tweet">
+          <form action="/tweets/" method="post">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <span class='hide error' id="long"><i class="fa-solid fa-triangle-exclamation"></i> This message is too long!</span>
+              <span class='hide error' id="short"><i class="fa-solid fa-triangle-exclamation"></i> Please enter a tweet!</span>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class='tweets' id="tweets-container">
+        </section>
+      </main>
+    </div>
   </body>
 </html>

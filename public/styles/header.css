@@ -17,3 +17,12 @@ header.container3 {
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 768px) {
+
+  .container3 {
+    flex-shrink: 2;
+    margin: 25px;
+    max-width: 450px;
+  }
+}

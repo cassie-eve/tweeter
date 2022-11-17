@@ -32,3 +32,20 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+@media (min-width: 768px) {
+  
+  main {
+    padding-right: 20px;
+  }
+  
+  .layout {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  
+  main {
+    padding: 0 60px;
+  }
+}
