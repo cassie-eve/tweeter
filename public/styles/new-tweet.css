@@ -6,7 +6,7 @@ form {
 textarea {
   border: none;
   border-bottom: black 3px solid;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background-color: #f4f1ec;
   padding-top: 10px;
 }
@@ -22,7 +22,7 @@ form div button {
 }
 
 .new-tweet {
-  padding: 50px 50px 40px 50px;
+  padding: 30px 5px;
 }
 
 .new-tweet form div {
@@ -30,6 +30,7 @@ form div button {
   justify-content: space-between;
   font-family: bungee, sans-serif;
   align-items: center;
+  font-size: 16px;
 
 }
 
@@ -43,6 +44,7 @@ form div button {
 
 .error {
   font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
 }
 
 .minus,
