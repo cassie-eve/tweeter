@@ -22,7 +22,7 @@ $(document).ready(function() {
       </div>
       <span>${tweetData.user.handle}</span>
       </header>
-      <p>${escape(tweetData.content.text)}</p>
+      <p id='user-tweet'>${escape(tweetData.content.text)}</p>
       <footer>
         <p>Created ${date}</p>
         <p><i class="fa-solid fa-flag"></i>   <i class="fa-solid fa-retweet"></i>   <i class="fa-solid fa-heart"></i></p>

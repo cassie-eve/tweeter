@@ -4,7 +4,7 @@ p i:hover {
 
 .tweet {
   border: rgb(91, 85, 85) 5px solid;
-  padding: 30px 30px 0px 30px;
+  padding: 10px;
   margin-bottom: 20px;
   transition: box-shadow .3s;
 }
@@ -22,13 +22,24 @@ p i:hover {
 .tweet footer {
   display: flex;
   justify-content: space-between;
-  border-top: 2px black solid;
+  border-top: 2px black solid;  
+  font-size: 14px;
+  margin-bottom: -10px;
 }
 
 .user {
   display: flex;
+  align-items: center;
+  font-size: 16px;
 }
 
 .user img {
-  padding-right: 15px;
+  padding-right: 5px;
+  width: auto; 
+  max-height: 40px;
+}
+
+#user-tweet {
+  margin: 8px 0;
+  font-size: 18px;
 }
