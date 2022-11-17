@@ -37,6 +37,10 @@ form div button {
   display: none;
 }
 
+.tag {
+  font-size: 1em;
+}
+
 .error {
   font-family: 'Source Sans Pro', sans-serif;
 }

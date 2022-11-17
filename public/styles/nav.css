@@ -17,6 +17,7 @@ span i {
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .container2 {
