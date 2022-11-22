@@ -39,22 +39,27 @@ $(document).ready(function() {
     if ($("#tweet-text").val().length > 140) {
       // The error message for this populates from composer-char-counter.js
       return;
-    } else if ($("#tweet-text").val() === '') {
+    };
+    
+    if ($("#tweet-text").val() === '') {
       $("#short").removeClass("hide");
       // The error message removal is handled in composer-char-counter.js
       return;
-    } else
-      $.ajax({
-        type: "POST",
-        url: '/tweets/',
-        data: $(this).serialize(),
-        success: $('#tweet-text').val("")
-      });
-    loadTweets();
+    };
+    
+    $.ajax({
+      type: "POST",
+      url: '/tweets/',
+      data: $(this).serialize()
+    }).then(loadTweets);
+    $('#tweet-text').val("");
+    const counter = document.querySelector('.counter');
+    counter.innerHTML = 140;
   });
 
   //renders each tweet on the page
   const renderTweets = function(array) {
+    $('#tweets-container').empty();
     for (let user of array) {
       const $tweet = createTweetElement(user);
       $('#tweets-container').prepend($tweet);
@@ -68,7 +73,5 @@ $(document).ready(function() {
       method: 'GET',
     }).then(renderTweets);
   };
-
   loadTweets();
-
 });
